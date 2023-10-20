@@ -20,6 +20,7 @@ struct Home: View {
                         .onTapGesture {
                             self.selectedIndex = 0
                         }
+                        .toolbar(.hidden, for: .navigationBar)
                         .tabItem {
                             if (selectedIndex == 0){
                                 Image(systemName: "house")
@@ -36,6 +37,7 @@ struct Home: View {
                         .onTapGesture {
                             self.selectedIndex = 1
                         }
+                        .toolbar(.hidden, for: .navigationBar)
                         .tabItem {
                             if (selectedIndex != 1){
                                 Image(systemName: "magnifyingglass")
@@ -52,6 +54,7 @@ struct Home: View {
                         .onTapGesture {
                             self.selectedIndex = 2
                         }
+                        .toolbar(.hidden, for: .navigationBar)
                         .tabItem {
                           Image(systemName: "bell")
                         }
@@ -61,6 +64,7 @@ struct Home: View {
                         .onTapGesture {
                             self.selectedIndex = 3
                         }
+                        .toolbar(.hidden, for: .navigationBar)
                         .tabItem {
                             Image(systemName: "envelope")
                         }
@@ -88,7 +92,7 @@ struct Home: View {
                     }
                     .padding()
                 }
-                .padding(.bottom, 65)
+                .padding(.bottom, 50)
             }
             .sheet(isPresented: $showCreatePost, content: {
                 CreatePostView(postText: textString)

@@ -8,12 +8,18 @@
 import SwiftUI
 
 struct TopBar: View {
+
+    @Binding var x : CGFloat
     @State var width = UIScreen.main.bounds.width
 
     var body: some View {
         VStack{
             HStack(alignment: .center, content: {
-                Button(action: {}, label: {
+                Button(action: {
+                    withAnimation{
+                        x = 0
+                    }
+                }, label: {
                     Image("person")
                         .resizable()
                         .aspectRatio(contentMode: .fill)
@@ -23,10 +29,10 @@ struct TopBar: View {
 
                 Spacer(minLength: 0)
 
-                Image("TwitterX")
+                Image("Premium")
                     .resizable()
                     .aspectRatio(contentMode: .fill)
-                    .frame(width: 35, height: 35)
+                    .frame(width: 36, height: 36)
                     .padding(.trailing)
 
                 Spacer(minLength: 0)
@@ -40,6 +46,6 @@ struct TopBar: View {
     }
 }
 
-#Preview {
-    TopBar()
-}
+//#Preview {
+//    TopBar(offset: (.constant(0)))
+//}

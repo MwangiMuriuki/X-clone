@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct SideMenuToggleViews: View {
-    @State var show = false
+    @State var show : Bool
     @State var title : String
     
     var body: some View {
@@ -25,7 +25,7 @@ struct SideMenuToggleViews: View {
                     self.show.toggle()
                 }
             }, label: {
-                Image(systemName: show ?  "chevron.down" : "chevron.up")
+                Image(systemName: show ?  "chevron.up" : "chevron.down")
                     .resizable()
                     .aspectRatio(contentMode: .fit)
                     .frame(width: 20, height: 20)
@@ -37,5 +37,5 @@ struct SideMenuToggleViews: View {
 }
 
 #Preview {
-    SideMenuToggleViews(title: "Title")
+    SideMenuToggleViews(show: false, title: "Title")
 }

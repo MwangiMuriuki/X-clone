@@ -32,6 +32,7 @@
 		199FA7F82AE28AB100637F9D /* FollowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 199FA7F72AE28AB100637F9D /* FollowView.swift */; };
 		199FA7FA2AE28DB800637F9D /* SideMenuToggleViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 199FA7F92AE28DB800637F9D /* SideMenuToggleViews.swift */; };
 		199FA7FC2AE292F600637F9D /* MenuButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 199FA7FB2AE292F600637F9D /* MenuButton.swift */; };
+		199FA7FF2AE2ECFD00637F9D /* AccountsSheetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 199FA7FE2AE2ECFD00637F9D /* AccountsSheetView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -61,6 +62,7 @@
 		199FA7F72AE28AB100637F9D /* FollowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FollowView.swift; sourceTree = "<group>"; };
 		199FA7F92AE28DB800637F9D /* SideMenuToggleViews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenuToggleViews.swift; sourceTree = "<group>"; };
 		199FA7FB2AE292F600637F9D /* MenuButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuButton.swift; sourceTree = "<group>"; };
+		199FA7FE2AE2ECFD00637F9D /* AccountsSheetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountsSheetView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -236,6 +238,7 @@
 				199FA7CF2ADFEA8000637F9D /* Home.swift */,
 				199FA7F12AE281FC00637F9D /* TopBar.swift */,
 				199FA7F52AE285D000637F9D /* SlideMenu.swift */,
+				199FA7FE2AE2ECFD00637F9D /* AccountsSheetView.swift */,
 			);
 			path = Main;
 			sourceTree = "<group>";
@@ -342,6 +345,7 @@
 				199FA7FA2AE28DB800637F9D /* SideMenuToggleViews.swift in Sources */,
 				199FA7B42ADFE7E000637F9D /* X_cloneApp.swift in Sources */,
 				199FA7D82ADFED0D00637F9D /* NotificationsView.swift in Sources */,
+				199FA7FF2AE2ECFD00637F9D /* AccountsSheetView.swift in Sources */,
 				199FA7EA2AE26CA600637F9D /* RandomString.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

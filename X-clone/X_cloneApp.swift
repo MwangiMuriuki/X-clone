@@ -11,7 +11,6 @@ import SwiftUI
 struct X_cloneApp: App {
     var body: some Scene {
         WindowGroup {
-//            ContentView()
             MainView()
         }
     }
