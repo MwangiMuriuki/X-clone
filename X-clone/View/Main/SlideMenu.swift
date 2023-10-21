@@ -12,6 +12,7 @@ struct SlideMenu: View {
     @State var showToolsMenu = false
     @State var showSupportMenu = false
     @State var showAccountsBottomSheet = false
+    @State var showProfilePage = false
 
     var buttonLabels = ["Profile", "Premium", "Bookmarks", "Lists", "Spaces", "Monetization"]
     var toolsLabels = ["Ads"]
@@ -24,11 +25,19 @@ struct SlideMenu: View {
 
             //MARK: - Top view
             HStack(spacing:0) {
-                Image("person")
-                    .resizable()
-                    .aspectRatio(contentMode: .fill)
-                    .frame(width: 54, height: 54)
-                    .clipShape(Circle())
+
+                //MARK: - Show User Profile
+                Button(action: {
+                    self.showProfilePage.toggle()
+                }, label: {
+                    Image("person")
+                        .resizable()
+                        .aspectRatio(contentMode: .fill)
+                        .frame(width: 54, height: 54)
+                        .clipShape(Circle())
+                }).fullScreenCover(isPresented: $showProfilePage, content: {
+                    UserProfile()
+                })
 
                 Spacer(minLength: 0)
 

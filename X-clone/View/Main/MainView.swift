@@ -23,27 +23,43 @@ struct MainView: View {
                     }
 
                     SlideMenu()
-//                        .shadow(color: Color.black.opacity(xOffset != 0 ? 0.1 :0),
-//                                radius: 5,
-//                                x: 5, y: 5)
+                        .shadow(color: Color.black.opacity(xOffset != 0 ? 0.1 :0), radius: 5,
+                                x: 5, y: 0)
                         .offset(x : xOffset)
 //                        .background(Color.black.opacity(xOffset == 0 ? 0.5 : 0))
-                        .background(Color("slideMenuBG", bundle: nil).opacity(xOffset == 0 ? 0.5 : 0))
                         .ignoresSafeArea(.all, edges: .vertical)
-                        .shadow(color: Color("slideMenuBG", bundle: nil).opacity(xOffset != 0 ? 0.1 :0),
-                            radius: 5,
-                            x: 5, y: 5)
                         .onTapGesture {
                             withAnimation{
-                                xOffset = -width
+//                                xOffset = -width
                             }
                         }
                 })
+                .gesture(DragGesture().onChanged({ value in
+                    if value.translation.width > 0{
+                        if xOffset < 0 {
+                            xOffset = -width + value.translation.width
+                        }
+                    }
+                    else {
+                        if xOffset != -width {
+                            xOffset = value.translation.width
+                        }
+                    }
+                })
+                    .onEnded({ value in
+                        withAnimation{
+                            if -xOffset < width / 2 {
+                                xOffset = 0
+                            }else {
+                                xOffset = -width
+                            }
+                        }
+
+                    }))
             }
             .toolbar(.hidden, for: .navigationBar)
             .navigationTitle("")
         }
-
 
     }
 }

@@ -18,6 +18,13 @@ struct MenuButton: View {
                 .frame(width: 20, height: 20)
                 .foregroundStyle(.foreground)
 
+//            Button(action: /*@START_MENU_TOKEN@*/{}/*@END_MENU_TOKEN@*/, label: {
+//                Text(buttonLabel)
+//                    .fontWeight(.bold)
+//                    .font(.headline)
+//                    .foregroundStyle(.primary)
+//            })
+
             Text(buttonLabel)
                 .fontWeight(.bold)
                 .font(.headline)

@@ -33,6 +33,9 @@
 		199FA7FA2AE28DB800637F9D /* SideMenuToggleViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 199FA7F92AE28DB800637F9D /* SideMenuToggleViews.swift */; };
 		199FA7FC2AE292F600637F9D /* MenuButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 199FA7FB2AE292F600637F9D /* MenuButton.swift */; };
 		199FA7FF2AE2ECFD00637F9D /* AccountsSheetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 199FA7FE2AE2ECFD00637F9D /* AccountsSheetView.swift */; };
+		199FA8012AE3AD6600637F9D /* UserProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 199FA8002AE3AD6600637F9D /* UserProfile.swift */; };
+		199FA8032AE3B0AF00637F9D /* BlurView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 199FA8022AE3B0AF00637F9D /* BlurView.swift */; };
+		199FA8062AE3C34C00637F9D /* TabButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 199FA8052AE3C34C00637F9D /* TabButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -63,6 +66,9 @@
 		199FA7F92AE28DB800637F9D /* SideMenuToggleViews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenuToggleViews.swift; sourceTree = "<group>"; };
 		199FA7FB2AE292F600637F9D /* MenuButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuButton.swift; sourceTree = "<group>"; };
 		199FA7FE2AE2ECFD00637F9D /* AccountsSheetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountsSheetView.swift; sourceTree = "<group>"; };
+		199FA8002AE3AD6600637F9D /* UserProfile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfile.swift; sourceTree = "<group>"; };
+		199FA8022AE3B0AF00637F9D /* BlurView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlurView.swift; sourceTree = "<group>"; };
+		199FA8052AE3C34C00637F9D /* TabButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -164,6 +170,8 @@
 		199FA7C62ADFE9D300637F9D /* Profile */ = {
 			isa = PBXGroup;
 			children = (
+				199FA8002AE3AD6600637F9D /* UserProfile.swift */,
+				199FA8022AE3B0AF00637F9D /* BlurView.swift */,
 			);
 			path = Profile;
 			sourceTree = "<group>";
@@ -179,6 +187,7 @@
 		199FA7C82ADFE9E000637F9D /* Items */ = {
 			isa = PBXGroup;
 			children = (
+				199FA8042AE3C33B00637F9D /* profile */,
 				199FA7FD2AE2930000637F9D /* SlideMenu */,
 				199FA7DF2AE0020F00637F9D /* MultilineTextField.swift */,
 				199FA7E52AE260BF00637F9D /* SearchBarView.swift */,
@@ -251,6 +260,14 @@
 				199FA7FB2AE292F600637F9D /* MenuButton.swift */,
 			);
 			path = SlideMenu;
+			sourceTree = "<group>";
+		};
+		199FA8042AE3C33B00637F9D /* profile */ = {
+			isa = PBXGroup;
+			children = (
+				199FA8052AE3C34C00637F9D /* TabButton.swift */,
+			);
+			path = profile;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -332,6 +349,8 @@
 				199FA7D62ADFECEE00637F9D /* MessagesView.swift in Sources */,
 				199FA7F42AE2845400637F9D /* MainView.swift in Sources */,
 				199FA7E82AE2667B00637F9D /* SearchUserCell.swift in Sources */,
+				199FA8062AE3C34C00637F9D /* TabButton.swift in Sources */,
+				199FA8032AE3B0AF00637F9D /* BlurView.swift in Sources */,
 				199FA7E62AE260BF00637F9D /* SearchBarView.swift in Sources */,
 				199FA7F02AE275FC00637F9D /* MessageListCell.swift in Sources */,
 				199FA7F82AE28AB100637F9D /* FollowView.swift in Sources */,
@@ -345,6 +364,7 @@
 				199FA7FA2AE28DB800637F9D /* SideMenuToggleViews.swift in Sources */,
 				199FA7B42ADFE7E000637F9D /* X_cloneApp.swift in Sources */,
 				199FA7D82ADFED0D00637F9D /* NotificationsView.swift in Sources */,
+				199FA8012AE3AD6600637F9D /* UserProfile.swift in Sources */,
 				199FA7FF2AE2ECFD00637F9D /* AccountsSheetView.swift in Sources */,
 				199FA7EA2AE26CA600637F9D /* RandomString.swift in Sources */,
 			);
