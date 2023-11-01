@@ -17,9 +17,10 @@ struct UserProfile: View {
 
 
     var body: some View {
+        //MARK: - Main ScrollView
         ScrollView(.vertical, showsIndicators: false) {
-
             VStack(spacing: 15, content: {
+
                 GeometryReader{ proxy -> AnyView in
                     let minY = proxy.frame(in: .global).minY
 
@@ -27,11 +28,12 @@ struct UserProfile: View {
                         self.offset = minY
                     }
                     return AnyView(
+                        // MARK: - Banner
                         ZStack{
                             Image("banner")
                                 .resizable()
                                 .aspectRatio(contentMode: .fill)
-                                .frame(width: UIScreen.main.bounds.width,
+                                .frame(width: screenBounds().width,
                                        height: minY > 0 ? 120 + minY : 120,
                                        alignment: .center)
 
@@ -61,9 +63,6 @@ struct UserProfile: View {
                                         .foregroundStyle(.labelColorPrimary)
                                         .font(.subheadline)
                                 })
-//                                .offset(y: 120)
-//                                .offset(y: titleOffset > 100 ? 0 : -getTitleOffset())
-//                                .opacity(titleOffset < 100 ? 1 : 0)
 
                                 Spacer(minLength: 0)
 
@@ -95,7 +94,7 @@ struct UserProfile: View {
                 .frame(height: 120)
                 .zIndex(1)
 
-                //MARK: - View after Banner
+                //MARK: - Header Section
                 VStack{
                     HStack (alignment: .center, content: {
                         Image("person")
@@ -118,6 +117,7 @@ struct UserProfile: View {
                                 .padding(.horizontal)
                                 .background(Capsule().stroke(Color.labelColorPrimary, lineWidth: 1.0))
                         }).padding(.trailing)
+                            
                     })
                     .padding(.top, -28)
                     .padding(.bottom, -10)
@@ -256,6 +256,9 @@ struct UserProfile: View {
         }
         .ignoresSafeArea(.all, edges: .top)
     }
+
+
+    // MARK: - Offset Calculations
 
     func blurViewOpacity() -> Double {
         let progress = -(offset + 20) / 100

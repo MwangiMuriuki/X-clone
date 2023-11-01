@@ -13,6 +13,10 @@ struct SlideMenu: View {
     @State var showSupportMenu = false
     @State var showAccountsBottomSheet = false
     @State var showProfilePage = false
+    @State var showDarkModeBottomSheet = false
+    @AppStorage("darkModeSelected") private var darkModeSelected = false
+
+
 
     var buttonLabels = ["Profile", "Premium", "Bookmarks", "Lists", "Spaces", "Monetization"]
     var toolsLabels = ["Ads"]
@@ -41,7 +45,7 @@ struct SlideMenu: View {
 
                 Spacer(minLength: 0)
 
-                // MARK: - Show Bottom Sheet Button
+                // MARK: - Show Accounts Bottom Sheet Button
                 Button(action: {
                     self.showAccountsBottomSheet.toggle()
                 }, label: {
@@ -200,17 +204,33 @@ struct SlideMenu: View {
 
             //MARK: - Last Section
             HStack(spacing:0) {
-                Button(action: {}, label: {
-                    Image(systemName: "moon.stars")
-                        .resizable()
-                        .aspectRatio(contentMode: .fit)
-                        .frame(width: 26, height: 26)
-                        .clipShape(Circle())
-                        .foregroundStyle(.foreground)
+                Button(action: {
+                    self.showDarkModeBottomSheet.toggle()
+                }, label: {
+                    if darkModeSelected == true{
+                        Image(systemName: "moon.stars")
+                            .resizable()
+                            .aspectRatio(contentMode: .fit)
+                            .frame(width: 26, height: 26)
+                            .clipShape(Circle())
+                            .foregroundStyle(.foreground)
+                    }
+                    else {
+                        Image(systemName: "sun.min")
+                            .resizable()
+                            .aspectRatio(contentMode: .fit)
+                            .frame(width: 26, height: 26)
+                            .clipShape(Circle())
+                            .foregroundStyle(.foreground)
+                    }
+                })
+                .sheet(isPresented: $showDarkModeBottomSheet, content: {
+                    DarkModeSheetView()
+                        .presentationDetents([.fraction(0.5)])
+                        .presentationDragIndicator(.visible)
+                        .presentationCornerRadius(34)
                 })
             }
-//            .padding(.leading, 20)
-//            .padding(.trailing, 10)
 
         })
         .padding(.horizontal)

@@ -10,6 +10,8 @@ import SwiftUI
 struct MainView: View {
     @State var width = UIScreen.main.bounds.width - 90
     @State var xOffset = -UIScreen.main.bounds.width + 90
+    @AppStorage("darkModeSelected") private var darkModeSelected = false
+
 
     var body: some View {
 
