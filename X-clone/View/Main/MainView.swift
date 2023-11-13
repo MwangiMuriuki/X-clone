@@ -23,6 +23,12 @@ struct MainView: View {
                         TopBar(x: $xOffset)
                         Home()
                     }
+//                    .offset(x: xOffset + width)
+//                    .onTapGesture {
+//                        withAnimation{
+//                            xOffset = -width
+//                        }
+//                    }
 
                     SlideMenu()
                         .shadow(color: Color.black.opacity(xOffset != 0 ? 0.1 :0), radius: 5,

@@ -41,6 +41,7 @@
 		199FA8012AE3AD6600637F9D /* UserProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 199FA8002AE3AD6600637F9D /* UserProfile.swift */; };
 		199FA8032AE3B0AF00637F9D /* BlurView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 199FA8022AE3B0AF00637F9D /* BlurView.swift */; };
 		199FA8062AE3C34C00637F9D /* TabButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 199FA8052AE3C34C00637F9D /* TabButton.swift */; };
+		19E07EB42B02211900034CCC /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19E07EB32B02211900034CCC /* LoginView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -79,6 +80,7 @@
 		199FA8002AE3AD6600637F9D /* UserProfile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfile.swift; sourceTree = "<group>"; };
 		199FA8022AE3B0AF00637F9D /* BlurView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlurView.swift; sourceTree = "<group>"; };
 		199FA8052AE3C34C00637F9D /* TabButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabButton.swift; sourceTree = "<group>"; };
+		19E07EB32B02211900034CCC /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -239,6 +241,7 @@
 			children = (
 				191D1FAD2AF24CD5006E5374 /* WelcomeView.swift */,
 				191D1FAF2AF25944006E5374 /* RegisterView.swift */,
+				19E07EB32B02211900034CCC /* LoginView.swift */,
 			);
 			path = Authentication;
 			sourceTree = "<group>";
@@ -393,6 +396,7 @@
 				199FA7B42ADFE7E000637F9D /* X_cloneApp.swift in Sources */,
 				199FA7D82ADFED0D00637F9D /* NotificationsView.swift in Sources */,
 				199FA8012AE3AD6600637F9D /* UserProfile.swift in Sources */,
+				19E07EB42B02211900034CCC /* LoginView.swift in Sources */,
 				199FA7FF2AE2ECFD00637F9D /* AccountsSheetView.swift in Sources */,
 				199FA7EA2AE26CA600637F9D /* RandomString.swift in Sources */,
 			);

@@ -8,6 +8,8 @@
 import SwiftUI
 
 struct WelcomeView: View {
+
+
     var body: some View {
 
         NavigationStack{
@@ -102,9 +104,9 @@ struct WelcomeView: View {
                     .frame(width: 300, height: 10)
 
 
-                    Button(action: {
-                        print("Create new Account")
-                    }, label: {
+                    NavigationLink {
+                        RegisterView().toolbar(.hidden)
+                    } label: {
                         RoundedRectangle(cornerRadius: 36)
                             .frame(width: 300, height: 50)
                             .foregroundStyle(.twitterBlue)
@@ -113,8 +115,7 @@ struct WelcomeView: View {
                                     .fontWeight(.bold)
                                     .foregroundStyle(.white)
                             )
-                    })
-
+                    }
 
                 })
                 .padding()
@@ -141,8 +142,14 @@ struct WelcomeView: View {
                     VStack(alignment: .leading, content: {
                         HStack(spacing: 2, content: {
                             Text("Have an account already? ")
-                            Text("Sign In")
-                                .foregroundStyle(.twitterBlue)
+
+                            NavigationLink {
+                                LoginView().toolbar(.hidden)
+                            } label: {
+                                Text("Sign In")
+                                    .foregroundStyle(.twitterBlue)
+                            }
+
                         })
                     })
                 }).padding(.bottom)

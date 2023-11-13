@@ -8,11 +8,18 @@
 import SwiftUI
 
 struct RegisterView: View {
+    @State var name = ""
+    @State var email = ""
+    @State var password = ""
+    @Environment(\.dismiss) var dismissView
+
     var body: some View {
         VStack{
             ZStack{
                 HStack(content: {
-                    Button(action: /*@START_MENU_TOKEN@*/{}/*@END_MENU_TOKEN@*/, label: {
+                    Button(action: {
+                        dismissView()
+                    }, label: {
                         Text("Cancel")
                             .foregroundStyle(.labelColorPrimary)
                     })
@@ -31,11 +38,42 @@ struct RegisterView: View {
 
             Text("Create your account")
                 .font(.system(size: 24, weight: .heavy, design: .default))
-                .frame(width: (screenBounds().width * 0.9), alignment: .leading)
+                .frame(width: (screenBounds().width * 0.9), alignment: .center)
 
-            VStack{
-                
-            }
+            VStack(alignment: .leading, spacing: 10, content: {
+                CustomAuthTextField(placeholder: "Name", text: $name)
+
+                CustomAuthTextField(placeholder: "Email", text: $email)
+
+                SecureAuthTextField(placeholder: "Password", text: $password)
+            })
+
+            Spacer(minLength: 0)
+
+            VStack(content: {
+
+                Rectangle()
+                    .frame(height: 1, alignment: .center)
+                    .foregroundStyle(.gray)
+                    .padding(.top, 40)
+
+                HStack(content: {
+                    Spacer(minLength: 0)
+
+                    Button(action: {
+                        print("Create new Account")
+                    }, label: {
+                        RoundedRectangle(cornerRadius: 36)
+                            .frame(width: 80, height: 36)
+                            .foregroundStyle(.labelColorPrimary)
+                            .overlay(
+                                Text("Next")
+                                    .fontWeight(.bold)
+                                    .foregroundStyle(.white)
+                            )
+                    }).padding(.trailing, 24)
+                })
+            })
 
         }
     }

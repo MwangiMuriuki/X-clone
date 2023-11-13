@@ -24,12 +24,11 @@ struct SecureAuthTextField: View {
                 SecureField("", text: $text)
                     .frame(height: 45)
                     .foregroundStyle(.labelColorPrimary)
-                    .padding(.bottom)
 
                 Rectangle()
                     .frame(height: 1, alignment: .center)
                     .foregroundStyle(.gray)
-                    .padding(.top)
+                    .padding(.top, 40)
 
             })
         }
